@@ -9,3 +9,26 @@ export const Img = styled.Image`
     position: absolute;
     right: 0;
 `
+
+export const Logo = styled.Image`
+    align-self: center;
+    justify-self: center;
+    margin-top: 193px;
+`
+
+export const Form = styled.View`
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    margin-top: 166px;
+`
+
+export const Input = styled.TextInput`
+    align-self: center;
+    background-color: #FFC8FB;
+    width: 76%;
+    padding-left: 20px;
+    height: 50px;
+    border-radius: 10px;
+    color: #595758;
+`
