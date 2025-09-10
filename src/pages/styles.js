@@ -32,3 +32,11 @@ export const Input = styled.TextInput`
     border-radius: 10px;
     color: #595758;
 `
+export const Nav = styled.View`
+` 
+
+export const P = styled.Text`
+`
+
+export const A = styled.TouchableOpacity`
+`
