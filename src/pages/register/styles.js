@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const LoginContainer = styled.View`
+export const RegisterContainer = styled.View`
     flex: 1;
     background-color: #FFEEF2;
 `
@@ -13,13 +13,13 @@ export const Img = styled.Image`
 export const Logo = styled.Image`
     align-self: center;
     justify-self: center;
-    margin-top: 193px;
+    margin-top: 90px;
 `
 
 export const Form = styled.View`
     display: flex;
     flex-direction: column;
-    gap: 38px;
+    gap: 18px;
     margin-top: 166px;
 `
 
@@ -32,11 +32,9 @@ export const Input = styled.TextInput`
     border-radius: 10px;
     color: #595758;
 `
-export const Nav = styled.View`
-` 
 
-export const P = styled.Text`
-`
-
-export const A = styled.TouchableOpacity`
+export const Arrow = styled.Image`
+    padding: 15px 15px;
+    width: 54px;
+    height: 54px;
 `
