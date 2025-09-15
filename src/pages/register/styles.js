@@ -38,3 +38,8 @@ export const Arrow = styled.Image`
     width: 54px;
     height: 54px;
 `
+
+export const Btn = styled.View`
+    width: 30%;
+    align-self: center;
+`

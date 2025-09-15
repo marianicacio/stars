@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import { LoginContainer, Img, Logo, Form, Nav, P, A } from "./styles"
+import { LoginContainer, Img, Logo, Form, Nav, P, A, Btn } from "./styles"
 import Button from "../../components/Button"
 import Input from "../../components/Input"
 
@@ -11,8 +11,10 @@ export default function Login() {
             <Logo source={require("../../assets/logo.png")}></Logo>
             <Form>
                 <Input placeholder="E-mail" />
-                <Input placeholder="Senha" password={true}/>
-                <Button label="Entrar"/>
+                <Input placeholder="Senha" password={true} />
+                <Btn>
+                    <Button label="Entrar" />
+                </Btn>
             </Form>
             <Nav>
                 <P>

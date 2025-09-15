@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const LoginContainer = styled.View`
+export const MenuContainer = styled.View`
     flex: 1;
     background-color: #FFEEF2;
 `
@@ -34,6 +34,7 @@ export const Input = styled.TextInput`
 `
 export const Nav = styled.View`
     align-self: center;
+    width: 60%;
     margin-top: 75px;
 `
 
@@ -45,9 +46,11 @@ export const P = styled.Text`
 export const A = styled.Text`
     color: #FF92C2;
     text-decoration: underline;
+
 `
 
-export const Btn = styled.View`
-    width: 30%;
-    align-self: center;
+export const Arrow = styled.Image`
+    padding: 15px 15px;
+    width: 54px;
+    height: 54px;
 `

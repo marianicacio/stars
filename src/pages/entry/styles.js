@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const LoginContainer = styled.View`
+export const EntryContainer = styled.View`
     flex: 1;
     background-color: #FFEEF2;
 `
@@ -13,13 +13,13 @@ export const Img = styled.Image`
 export const Logo = styled.Image`
     align-self: center;
     justify-self: center;
-    margin-top: 193px;
+    margin-top: 90px;
 `
 
 export const Form = styled.View`
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 18px;
     margin-top: 166px;
 `
 
@@ -30,21 +30,13 @@ export const Input = styled.TextInput`
     padding-left: 20px;
     height: 50px;
     border-radius: 10px;
-    color: white;
-`
-export const Nav = styled.View`
-    align-self: center;
-    margin-top: 75px;
-`
-
-export const P = styled.Text`
-    font-size: 16px;
     color: #595758;
 `
 
-export const A = styled.Text`
-    color: #FF92C2;
-    text-decoration: underline;
+export const Arrow = styled.Image`
+    padding: 15px 15px;
+    width: 54px;
+    height: 54px;
 `
 
 export const Btn = styled.View`

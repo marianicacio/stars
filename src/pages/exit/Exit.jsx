@@ -1,21 +1,19 @@
-import { RegisterContainer, Img, Logo, Form, Arrow, Btn } from "./styles"
+import { EntryContainer, Img, Logo, Form, Arrow, Btn } from "./styles"
 import Input from "../../components/Input"
 import Button from "../../components/Button"
 
-export default function Register() {
+export default function Entry() {
     return (
-        <RegisterContainer>
+        <EntryContainer>
             <Arrow source={require("../../assets/back.png")}></Arrow>
             <Img source={require("../../assets/planets.png")}></Img>
             <Logo source={require("../../assets/logo.png")}></Logo>
             <Form>
-                <Input placeholder="Nome" />
-                <Input placeholder="E-mail" />
-                <Input placeholder="Senha" password={true} />
+                <Input placeholder="Placa do Veículo" />
                 <Btn>
-                    <Button label="Criar" />
+                    <Button color="#595758" label="Sair" />
                 </Btn>
             </Form>
-        </RegisterContainer>
+        </EntryContainer>
     )
 }
