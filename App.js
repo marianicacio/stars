@@ -15,7 +15,7 @@ export default function App() {
   return (
     <ContainerApp>
       <StatusBar hidden/>
-      <Exit/>
+      <Menu/>
     </ContainerApp>
   );
 }

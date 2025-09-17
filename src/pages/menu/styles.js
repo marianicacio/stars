@@ -54,3 +54,34 @@ export const Arrow = styled.Image`
     width: 54px;
     height: 54px;
 `
+
+export const Modal = styled.Modal`
+
+`
+
+export const ModalContainer = styled.View`
+
+`
+
+export const Title = styled.Text`
+
+`
+
+export const ModalBtn = styled.TouchableOpacity`
+
+`
+
+export const ButtonFake = styled.TouchableOpacity`
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 44px;
+    margin-top: 50px;
+    background-color: #FF92C2;
+`
+
+export const Label = styled.Text`
+     color: white;
+`
