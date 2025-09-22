@@ -60,6 +60,7 @@ export const Modal = styled.Modal`
 `
 
 export const ModalContainer = styled.View`
+    flex: 1;
 
 `
 
