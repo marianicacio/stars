@@ -56,20 +56,32 @@ export const Arrow = styled.Image`
 `
 
 export const Modal = styled.Modal`
-
 `
 
 export const ModalContainer = styled.View`
-    flex: 1;
-
-`
-
-export const Title = styled.Text`
-
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
 `
 
 export const ModalBtn = styled.TouchableOpacity`
+    width: 100%;
+`
+export const ModalAdd = styled.View`
+    width: 30%;
+`
 
+export const Cards = styled.View`
+    gap: 15px;
+    margin-top: 25px;
+`
+
+export const Close = styled.Image`
+    width: 34px;
+    height: 37px;
+    position: absolute;
+    right: 20px;
 `
 
 export const ButtonFake = styled.TouchableOpacity`
