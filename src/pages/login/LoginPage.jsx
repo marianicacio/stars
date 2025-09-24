@@ -13,7 +13,7 @@ export default function Login() {
                 <Input placeholder="E-mail" />
                 <Input placeholder="Senha" password={true} />
                 <Btn>
-                    <Button label="Entrar" />
+                    <Button label="Entrar" color={"#FF92C2"}/>
                 </Btn>
             </Form>
             <Nav>
