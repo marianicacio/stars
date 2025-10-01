@@ -1,11 +1,18 @@
-import { RegisterContainer, Img, Logo, Form, Arrow, Btn } from "./styles"
+import { RegisterContainer, Img, Logo, Form, Arrow, Btn, Back } from "./styles"
 import Input from "../../components/Input"
 import Button from "../../components/Button"
+import { useNavigation } from "@react-navigation/native"
 
 export default function Register() {
+
+       const navigator = useNavigation()
+
     return (
         <RegisterContainer>
-            <Arrow source={require("../../assets/back.png")}></Arrow>
+            <Arrow onPress={() => navigator.goBack()}>
+                <Back source={require("../../assets/back.png")}>
+                </Back>
+            </Arrow>
             <Img source={require("../../assets/planets.png")}></Img>
             <Logo source={require("../../assets/logo.png")}></Logo>
             <Form>
@@ -13,7 +20,7 @@ export default function Register() {
                 <Input placeholder="E-mail" />
                 <Input placeholder="Senha" password={true} />
                 <Btn>
-                    <Button label="Criar" />
+                    <Button label="Criar" color={"#FF92C2"} />
                 </Btn>
             </Form>
         </RegisterContainer>

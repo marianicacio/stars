@@ -1,19 +1,24 @@
-import { MenuContainer, Img, Logo, Nav, Arrow, Modal, ModalContainer, ModalBtn, ButtonFake, Label, Close, Cards, ModalAdd } from "./styles"
+import { MenuContainer, Img, Logo, Nav, Arrow, Modal, ModalContainer, ModalBtn, ButtonFake, Label, Close, Cards, ModalAdd, Back } from "./styles"
 import Button from "../../components/Button"
 import Card from "../../components/Card"
 import Input from "../../components/Input"
 import React, { useState } from "react"
 import { Dimensions, StyleSheet } from "react-native"
+import { useNavigation } from "@react-navigation/native"
 
 export default function Menu() {
 
 
     const [modalVisible, setModal] = useState(false)
     const screenHeight = Dimensions.get("window").height
+    const navigator = useNavigation()
 
     return (
         <MenuContainer>
-            <Arrow source={require("../../assets/back.png")}></Arrow>
+            <Arrow onPress={() => navigator.goBack()}>
+                <Back source={require("../../assets/back.png")}> 
+                </Back>
+            </Arrow>
             <Img style={
                 modalVisible ? (styles.imageSumido) : (styles.image)
             } source={require("../../assets/planets.png")}></Img>
@@ -21,11 +26,11 @@ export default function Menu() {
                 modalVisible ? (styles.imageSubida) : (styles.image)
             } source={require("../../assets/logo.png")}></Logo>
             <Nav>
-                <Button color="#FF92C2" label={"Entrada"} />
+                <Button color="#FF92C2" label={"Entrada"} navigate={"Entry"} />
                 <ButtonFake style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onPress={() => setModal(true)}>
                     <Label>Lista de Veiculos</Label>
                 </ButtonFake>
-                <Button color="#FF92C2" label={"Saída"} />
+                <Button color="#FF92C2" label={"Saída"} navigate={"Exit"}/>
             </Nav>
             <Modal
                 animationType="slide"

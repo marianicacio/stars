@@ -49,7 +49,13 @@ export const A = styled.Text`
 
 `
 
-export const Arrow = styled.Image`
+export const Arrow = styled.TouchableOpacity`
+    padding: 15px 15px;
+    width: 54px;
+    height: 54px;
+`
+
+export const Back = styled.Image`
     padding: 15px 15px;
     width: 54px;
     height: 54px;
