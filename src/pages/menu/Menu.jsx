@@ -15,7 +15,7 @@ export default function Menu() {
 
     return (
         <MenuContainer>
-            <Arrow onPress={() => navigator.goBack()}>
+            <Arrow onPress={() => navigator.navigate("Login")}>
                 <Back source={require("../../assets/back.png")}> 
                 </Back>
             </Arrow>
@@ -26,11 +26,11 @@ export default function Menu() {
                 modalVisible ? (styles.imageSubida) : (styles.image)
             } source={require("../../assets/logo.png")}></Logo>
             <Nav>
-                <Button color="#FF92C2" label={"Entrada"} navigate={"Entry"} />
+                <Button color="#FF92C2" label={"Entrada"} onPress={() => navigator.navigate("Entry")}/>
                 <ButtonFake style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onPress={() => setModal(true)}>
                     <Label>Lista de Veiculos</Label>
                 </ButtonFake>
-                <Button color="#FF92C2" label={"Saída"} navigate={"Exit"}/>
+                <Button color="#FF92C2" label={"Saída"} onPress={() => navigator.navigate("Exit")}/>
             </Nav>
             <Modal
                 animationType="slide"

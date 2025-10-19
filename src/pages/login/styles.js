@@ -34,7 +34,7 @@ export const Input = styled.TextInput`
 `
 export const Nav = styled.View`
     align-self: center;
-    margin-top: 75px;
+    margin-top: 20px;
 `
 
 export const P = styled.Text`
