@@ -19,6 +19,19 @@ export default function Register() {
         console.log("handleRegister iniciado");
         console.log("Dados:", {email, name, password });
 
+        // Verificar se todos os campos foram preenchidos
+        if (!name || !email || !password) {
+            Alert.alert("Atenção", "Preencha todos os campos antes de continuar.");
+            return; // impede de continuar
+        }
+
+        // Verificar se o email termina com @gmail.com
+        if (!email.includes("@gmail.com") || email.startsWith("@")) {
+            Alert.alert("E-mail inválido", "Digite um e-mail Gmail válido, como exemplo@gmail.com");
+            return;
+        }
+
+
         const user = await registerUser( email, name, password);
         console.log("user retornado:", user);
 

@@ -81,6 +81,7 @@ export const ModalAdd = styled.View`
 export const Cards = styled.View`
     gap: 15px;
     margin-top: 25px;
+    align-items: center;
 `
 
 export const Close = styled.Image`

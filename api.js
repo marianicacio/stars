@@ -102,22 +102,29 @@ export const RegisterVeiculo = async ( placa, dt_entrada) => {
         Alert.alert("Erro", "Já existe um carro com esta Placa")
         return null
 
-    }else {
-
-        const response = await fetch(API_URL_VEICULOS, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({placa, dt_entrada }),
-        });
-
-        Alert.alert("Sucesso", "Veiculo Cadastrado com Sucesso")
-
-        console.log("Status da resposta:", response.status); // ✅
-        const data = await response.json();
-        console.log("Resposta da API:", data); // ✅
-        return data;
-
     }
+
+    const placaRegex = /^[A-Z]{3}-\d{4}$/;
+
+    if (!placaRegex.test(placa)) {
+      Alert.alert("Placa inválida", "Digite uma placa no formato ABC-1234");
+      return null;
+    }
+
+    const response = await fetch(API_URL_VEICULOS, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({placa, dt_entrada }),
+    });
+
+    Alert.alert("Sucesso", "Veiculo Cadastrado com Sucesso")
+
+    console.log("Status da resposta:", response.status); // ✅
+    const data = await response.json();
+    console.log("Resposta da API:", data); // ✅
+    return data;
+
+
   } catch (error) {
     console.error("Erro ao cadastrar:", error);
     return null;
