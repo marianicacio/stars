@@ -32,7 +32,7 @@ export default function Login() {
             );
 
             if (user) {
-                Alert.alert("Sucesso", `Bem-vindo, ${user.username}!`);
+                Alert.alert("Sucesso", `Bem-vindo, ${user.name}!`);
                 setEmail("");
                 setPassword("");
                 navigator.navigate("Home");

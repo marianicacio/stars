@@ -8,7 +8,7 @@ export default function Cep() {
     const [data, setData] = useState(null)
 
     function buscarCep(cep) {
-        axios.get(`https://parkingapisenai.azurewebsites.net/api/veiculos/placa/{placa}`)
+        axios.get(`https://parkingapisenai.azurewebsites.net/api/veiculos/placa/${placa}`)
             .then((res) => {
                 setData(res.data)
             })

@@ -15,7 +15,7 @@ export default function Card({ placa, data, hora }) {
 
 const styles = StyleSheet.create({
     card: {
-        width: "95%",
+        width: 390,
         borderRadius: 10,
         flexDirection: "row",
         gap: 148,

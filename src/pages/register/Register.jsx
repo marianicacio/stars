@@ -36,7 +36,7 @@ export default function Register() {
         console.log("user retornado:", user);
 
         if (user) {
-            Alert.alert("Sucesso", `Usuário ${user.username} cadastrado!`);
+            Alert.alert("Sucesso", `Usuário ${user.name} cadastrado!`);
             setName("")
             setEmail("");
             setPassword("");
