@@ -15,37 +15,34 @@ export default function Login() {
 
     const [users, setUsers] = useState([]);
 
-     useEffect(() => {
+    useEffect(() => {
         const fetchData = async () => {
-        const data = await getVeiculos();
-        setVeiculos(data);
+            const data = await getVeiculos();
+            setVeiculos(data);
         };
         fetchData();
     }, []);
 
     const handleLogin = async () => {
-      console.log("Botão clicado"); // Teste se a função é chamada
-      try {
-          const users = await fetchUsers();
-          const user = users.find(
-          (u) => u.email === email && u.password === password
-          );
+        console.log("Botão clicado"); // Teste se a função é chamada
+        try {
+            const users = await fetchUsers();
+            const user = users.find(
+                (u) => u.email === email && u.password === password
+            );
 
-          console.log(email)
-          console.log(password)
-  
-          if (user) {
-          Alert.alert("Sucesso", `Bem-vindo, ${user.username}!`);
-          setEmail("");
-          setPassword("");
-          navigator.navigate("Home");
-          } else {
-            Alert.alert("Erro", "Usuário ou senha incorretos");
-          }
-      } catch (error) {
-          console.error(error);
-      }
-  };
+            if (user) {
+                Alert.alert("Sucesso", `Bem-vindo, ${user.username}!`);
+                setEmail("");
+                setPassword("");
+                navigator.navigate("Home");
+            } else {
+                Alert.alert("Erro", "Usuário ou senha incorretos");
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
 
 
@@ -57,7 +54,7 @@ export default function Login() {
                 <Input placeholder="E-mail" value={email} onChangeText={setEmail} />
                 <Input placeholder="Senha" value={password} onChangeText={setPassword} password={true} />
                 <Btn>
-                    <Button onPress={handleLogin} label="Entrar" color={"#FF92C2"}/>
+                    <Button onPress={handleLogin} label="Entrar" color={"#FF92C2"} />
                 </Btn>
             </Form>
             <Nav>

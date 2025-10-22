@@ -56,6 +56,7 @@ export const registerUser = async ( email, name, password) => {
     if(user) {
 
         Alert.alert("Erro", "Já existe um usuario com este email!")
+        console.log("Erro, já existe um usuario com este email")
         return null
 
     }else {
@@ -69,8 +70,8 @@ export const registerUser = async ( email, name, password) => {
         Alert.alert("Sucesso", "Usuario Cadastrado com Sucesso")
 
         console.log("Status da resposta:", response.status); // ✅
-        const data = await response.json();
-        console.log("Resposta da API:", data); // ✅
+
+        const data = await response.json(); // ✅
         return data;
 
     }

@@ -73,7 +73,7 @@ export default function Menu() {
                     </Cards>
 
                     <ModalAdd>
-                        <Button color="#595758" label={"Criar"} />
+                        <Button color="#595758" label={"Criar"} onPress={() => navigator.navigate("Entry")} />
                     </ModalAdd>
                 </ModalContainer>
             </Modal>

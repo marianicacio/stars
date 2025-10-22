@@ -13,12 +13,13 @@ export default function Entry() {
 
     const [placa, setPlaca] = useState("")
 
-    let dt_entrada = "25-09-2022-7:00"
+    const agora = new Date();
+    const dataHora = agora.toLocaleString("pt-BR");
     
     const handleRegister = async () => {
             console.log("handleRegister iniciado");
     
-            const cadastro = await RegisterVeiculo(placa, dt_entrada);
+            const cadastro = await RegisterVeiculo(placa, dataHora);
             console.log("valor retornado:", cadastro);
     
             if (cadastro) {
