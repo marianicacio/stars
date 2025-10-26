@@ -1,6 +1,6 @@
 # 🚗 Stars – Aplicativo de Estacionamento
 
-> Aplicativo mobile desenvolvido em **React Native** para gestão de vagas de estacionamento, utilizando **Axios** para consumo de API e **Styled Components** para uma interface moderna e responsiva.
+> Aplicativo mobile desenvolvido em **React Native** para gestão de vagas de estacionamento, utilizando **Axios** para consumo de API e **Styled Components** para uma interface moderna.
 
 ---
 
